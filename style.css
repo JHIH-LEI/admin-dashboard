@@ -1,0 +1,321 @@
+:root {
+  font-size: 62.5%;
+  --background-color: rgb(227 232, 239);
+  --background-color-half: rgb(227 232, 239, 0.4);
+  --main-color: #4590cf;
+  --text-color: #636363;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 5fr;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  height: 100%;
+  color: white;
+  font-weight: 700;
+  background-color: var(--main-color);
+  font-size: clamp(1.6rem, 1vw + 1rem, 3.4rem);
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    font-size: clamp(2rem, 1vw + 1.4rem, 4rem);
+    padding-top: 3.5rem;
+  }
+
+  .nav-items,
+  .nav-control {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-items li > *,
+  .nav-control li > * {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    width: 2em;
+    height: 1em;
+    color: white;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 0.5fr 5fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main sidebar";
+
+  .header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-bottom: 1px solid black;
+    gap: 1rem;
+    padding: 2rem;
+
+    .header-first-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10rem;
+
+      .search-container {
+        /* flex: 1; */
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex: 1;
+
+        width: 100%;
+        svg {
+          height: 100%;
+          width: 2.4em;
+        }
+        input {
+          min-width: 100px;
+          appearance: none;
+          outline: none;
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: 25px;
+          padding: 0.5em 1em;
+          background-color: var(--background-color);
+        }
+
+        input:focus {
+          border: 1px solid var(--text-color);
+        }
+      }
+
+      .personal-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+        font-size: clamp(1.6rem, 1vh + 1rem, 3.2rem);
+        svg {
+          height: 1.4em;
+          width: 1.4em;
+        }
+        img {
+          height: 2em;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .header-second-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 2rem;
+
+      .greeting {
+        font-size: clamp(1rem, 1vh + 0.5rem, 2.4rem);
+        font-weight: 400;
+      }
+
+      .user-info {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .user-name {
+        font-size: clamp(1.6rem, 1.5vh + 1rem, 3rem);
+      }
+
+      img {
+        height: 2em;
+      }
+
+      .user-action-board {
+        display: flex;
+        gap: 1em;
+        justify-content: space-evenly;
+        .user-action-button {
+          flex: 1;
+          background-color: var(--main-color);
+          color: white;
+          padding: 0.5em 1.5em;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+}
+
+.project-board,
+.sidebar {
+  padding-top: 2rem;
+  background-color: var(--background-color-half);
+  padding: 2rem;
+}
+
+.project-board-header,
+.sidebar-item-title {
+  margin-bottom: 2vh;
+  font-size: clamp(1rem, 1vw + 1.5rem, 3rem);
+}
+
+.project-board {
+  grid-area: main;
+
+  .project-board-list {
+    display: grid;
+    gap: 4em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      border: 1px solid var(--text-color);
+      border-radius: 10px;
+      background-color: white;
+      border-left: 1.5em solid rgb(255, 196, 0);
+      padding: 2em;
+      line-height: 2rem;
+
+      .card-body {
+        margin-bottom: auto;
+
+        h2 {
+          font-size: clamp(1.5rem, 0.5vw + 1.4rem, 2.8rem);
+          margin-bottom: 0.5em;
+        }
+        p {
+          font-size: clamp(1rem, 0.5vw + 1.2rem, 2.4rem);
+          color: var(--text-color);
+        }
+      }
+
+      .card-footer {
+        align-self: end;
+        display: flex;
+        gap: 1.5em;
+      }
+    }
+  }
+
+  .add-to-star-list-button {
+    background-image: url("star-plus-outline.svg");
+  }
+
+  .add-to-read-list-button {
+    background-image: url("eye-plus-outline.svg");
+  }
+
+  .share-button {
+    background-image: url("share.svg");
+  }
+
+  .add-to-read-list-button,
+  .add-to-star-list-button,
+  .share-button {
+    background-size: cover;
+    background-position: center;
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 2rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  .announcement-wrapper,
+  .account-wrapper {
+    padding: 2rem;
+  }
+  .announcements {
+    display: flex;
+    flex-direction: column;
+    li {
+      background-color: white;
+    }
+    .announcement-list {
+      display: flex;
+      flex-direction: column;
+
+      .announcement-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--text-color);
+      }
+
+      .announcement-title {
+        font-size: clamp(1rem, 1vh + 1rem, 2rem);
+        font-weight: 700;
+      }
+
+      .announcement-content {
+        color: var(--text-color);
+
+        font-size: clamp(1rem, 1vh + 0.8rem, 1.6rem);
+      }
+    }
+  }
+
+  .trending-list {
+    li {
+      background-color: white;
+    }
+
+    .account-wrapper {
+      display: flex;
+      align-items: center;
+      font-size: clamp(1rem, 1vw + 1.4rem, 2rem);
+      gap: 1em;
+
+      .trending-account {
+        font-weight: 700;
+      }
+      .trending-account-intro {
+        color: var(--text-color);
+      }
+      .trending-account-avatar {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+      }
+    }
+  }
+}
