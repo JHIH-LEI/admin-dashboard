@@ -28,7 +28,7 @@ ul {
   margin: 0px;
 }
 
-.nav {
+nav {
   display: flex;
   flex-direction: column;
   gap: 10rem;
@@ -65,7 +65,7 @@ ul {
   }
 }
 
-.main {
+main {
   display: grid;
   grid-template-rows: 0.5fr 5fr;
   grid-template-columns: 3fr 1fr;
@@ -73,7 +73,7 @@ ul {
     "header header"
     "main sidebar";
 
-  .header {
+  header {
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -88,12 +88,10 @@ ul {
       gap: 10rem;
 
       .search-container {
-        /* flex: 1; */
         margin-right: auto;
         display: flex;
         align-items: center;
         position: relative;
-        flex: 1;
 
         width: 100%;
         svg {
@@ -101,10 +99,9 @@ ul {
           width: 2.4em;
         }
         input {
-          min-width: 100px;
           appearance: none;
           outline: none;
-          width: 100%;
+          width: 60%;
           height: 100%;
           border: none;
           border-radius: 25px;
