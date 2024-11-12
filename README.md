@@ -15,3 +15,7 @@ Additionally, I experimented with CSS clamp() for creating a fluid design that a
 Here’s the final result:
 
 [demo](https://jhih-lei.github.io/admin-dashboard/)
+
+## Web Accessibility Improvements:
+1. Utilized semantic landmarks to enhance navigation and improve content recognition for screen readers and assistive technologies.
+2. Implemented a hidden skip link to enable better keyboard navigation, allowing users to quickly skip to the main content.
