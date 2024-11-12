@@ -15,6 +15,8 @@ Additionally, I experimented with CSS clamp() for creating a fluid design that a
 Here’s the final result:
 
 [demo](https://jhih-lei.github.io/admin-dashboard/)
+<br>
+<img width="2041" alt="螢幕截圖 2024-11-12 上午11 22 48" src="https://github.com/user-attachments/assets/7d7dfbc3-9b0d-47d6-8496-512b8d615fa4">
 
 ## Web Accessibility Improvements:
 1. Utilized semantic landmarks to enhance navigation and improve content recognition for screen readers and assistive technologies.
