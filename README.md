@@ -19,3 +19,16 @@ Here’s the final result:
 ## Web Accessibility Improvements:
 1. Utilized semantic landmarks to enhance navigation and improve content recognition for screen readers and assistive technologies.
 2. Implemented a hidden skip link to enable better keyboard navigation, allowing users to quickly skip to the main content.
+
+## Web Performance Improvements:
+1. using WebP image format as first choice, also added fallback for browsers that do not support WebP format.
+   Result by lighthouse
+
+   ### Before:
+   <br>
+   <img width="577" alt="螢幕截圖 2024-11-12 上午11 08 45" src="https://github.com/user-attachments/assets/202041eb-77fb-4f83-b1ad-9aa2d397073c">
+   <br>
+
+   ### After:
+   <br>
+   <img width="750" alt="螢幕截圖 2024-11-12 上午11 19 36" src="https://github.com/user-attachments/assets/afb73255-d015-4e10-bc70-0b1f12142292">
